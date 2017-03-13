@@ -1,0 +1,18 @@
+
+<h1>Your letters</h1>
+<ul>
+<% @grid.each do |letter| %>
+<li class="letter">
+  <%= letter[0] %>
+</li>
+<% end %>
+</ul>
+
+
+<form action="result" method="get">
+  <input type="hidden" value="<%= @grid.join("") %>" name="given_grid">
+  <input type="hidden" name="end_time" value=" <%= Time.now %> ">
+  <input type="text" name="answer" placeholder="enter your response">
+  <input type="submit" value="get result">
+</form>
+<p>What's the longest word you can think of containing these letters?</p>

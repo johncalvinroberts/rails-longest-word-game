@@ -1,0 +1,8 @@
+<h1>Your Score is <%= @result[:score] %></h1>
+<h2><%= @result[:message] %></h2>
+<p>Given letters: <%= @given_grid %></p>
+<p>Your word: <%= @answer %></p>
+<p>Your word in French: <%= @result[:translation] %></p>
+<p>Time: <%= @result[:time] %> seconds</p>
+
+<%= link_to '<input type="submit" value="again">'.html_safe, guess_path %>
